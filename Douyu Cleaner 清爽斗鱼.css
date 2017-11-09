@@ -1,0 +1,452 @@
+@-moz-document domain("douyu.com") {
+    /*====================================================
+			Douyu Cleaner 清爽斗鱼
+			by Another_Dreams
+			Blog: weijohn.me
+  
+			v2.60
+			Last updated: 2017/11/07
+	======================================================*/
+    /*====================================================
+		基于 Chrome 50+ 进行编写,配合ABP或uBlock
+  		主要针对登陆后的斗鱼,不登陆时有些细节未调整!!! 
+	=====================================================*/
+    /*临时活动屏蔽区*/
+    /* 聊天区最大高度根据浏览器手动调整,主要针对1080p */
+    .body-flash-fullpage .chat-cont .chat-cont-wrap {
+        height: calc(100% - 0px) !important;
+    }
+    .body-flash-fullpage .chat-speak {
+        padding: 0px 7px 7px !important;
+    }
+    b.umes-icon {
+        display: none!important;
+    }
+    /*去酬勤榜*/
+    #js-fans-rank {
+        display: none!important;
+        height: 0px!important;
+    }
+    /* 斗鱼活动按钮 去除视频下方竞猜、活动等 */
+    .action-list,
+    /*去分类广告*/
+    #header .head-nav .assort-ad,
+    /*去历史和关注的广告条*/
+    .f-sign-cont,
+    .his-sign-cont,
+    /*去个人中心我的任务*/
+    .o-login .l-menu .task,
+    /*去个人中心的贵族*/
+    .nobility-privilege,
+    /*房间头部广告*/
+    .room-ad-top,
+    /*去广告*/
+    .chat-top-ad,
+    .chat_top_pic,
+    .rank-video-ad,
+    /*去视频下方广告*/
+    .room-ad-video-down,
+    /*去弹幕公告*/
+    #js-chat-notice,
+    /*去热门推广*/
+    #js-live-room-normal-equal-left,
+    /*去视频下方任务*/
+    .fl.task-btn,
+    /*去视频下方风云榜*/
+    .liveOrder-trigger,
+    /*去直播公告*/
+    #js-live-room-normal-equal-right,
+    /*去聊天区广告*/
+    .chat-ad,
+    /*去领鱼丸提示*/
+    .pay-task,
+    /*去分享扫一扫*/
+    .room-mes .btn-group .sq-wrap,
+    /*去领鱼丸主播推荐*/
+    #js-yw-rmd-rooms,
+    .vcode9-sign,
+    .myvip--guide--oncar,
+    /*去超管推荐*/
+    .js-live-room-recommend,
+    /*去缩放提示*/
+    .pop-zoom-container,
+    /*去聊天框粉丝徽章*/
+    .fans-entrance,
+    /*去顶部游戏选项*/
+    #header .head-nav>li.funny,
+    #header .head-nav .wxr-menu,
+    /*去顶部鱼吧选项*/
+    #header .head-nav>li.yuba,
+    /*主播房间信息*/
+    .catagory-order-container,
+    /*主播土豪排行榜*/
+    .feedback-report-button,
+    /*去举报按钮*/
+    .focus-lead,
+    /*关注提醒*/
+    .anchor-task-icon,
+    .anchor-task-progress,
+    /*等级上线提醒*/
+    .normallevel-lead,
+    /*主播商品推荐*/
+    .fishop-anchor-push-box.expanded,
+    .fishop-anchor-recommands-box.expanded,
+    /*输入框首充徽章*/
+    /*输入框首充徽章*/
+    .firstpay-award-icon,
+    .firstpay-entrance,
+    .firstpay-modal,
+    .firstpay-warp {
+        display: none !important;
+    }
+    /*修复屏蔽粉丝徽章导致聊天框的问题*/
+    .chat-feat textarea.cs-textarea {
+        padding-left: 13px !important;
+        width: 250px !important;
+    }
+    /*修复抢飞机宝箱验证码偏移出屏幕的问题*/
+    .geetest_fullpage_click.geetest_float.geetest_wind.geetest_slide3 {
+        left: 79%!important;
+    }
+    /*房间头部广告*/
+    .room-ad-top {
+        width: 0px;
+        left: 0px;
+    }
+    /*主播房间信息调整*/
+    .btn-group .focus-box {
+        top: auto!important;
+        bottom: 5px;
+        -moz-transform: scale(0.6);
+        zoom: 0.6;
+    }
+    .relate-text .headline,
+    .relate-text .acinfo-fs-con {
+        width: calc(45% + 100px) !important;
+    }
+    .relate-text .headline,
+    .relate-text .acinfo-fs-con,
+    .relate-text .tag-fs-con {
+        float: left;
+    }
+    .relate-text .anchor-impress {
+        margin: 3px 0 0!important;
+    }
+    /*主播头像*/
+    .relate-text {
+        margin-left: 62px !important;
+    }
+    .room-mes {
+        height: 60px !important;
+    }
+    /*主播头像*/
+    .room-mes .anchor-pic {
+        margin: 2px 0px 0px 2px;
+        width: 55px !important;
+        height: 55px !important;
+    }
+    .room-mes .anchor-pic img {
+        border-radius: 50%!important;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+    .anchor-pic .anchor-cover-wrap .cover {
+        background: none;
+    }
+    @media screen and (max-width: 1900px) {
+        .relate-text .acinfo-fs-con {
+            width: 100% !important;
+        }
+        .relate-text .anchor-impress {
+            margin: 0!important;
+            -moz-transform: scale(0.9);
+            zoom: 0.9;
+        }
+        /*主播头像*/
+        .relate-text {
+            margin-left: 85px !important;
+        }
+        .room-mes {
+            height: 80px !important;
+        }
+        /*主播头像*/
+        .room-mes .anchor-pic {
+            margin: 2px 0px 0px 2px;
+            width: 75px !important;
+            height: 75px !important;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        .relate-text .headline,
+        .room-mes .headline h1 {
+            width: 350px !important;
+            max-width: 350px!important;
+        }
+    }
+    /*视频录像按钮*/
+    .video-recording {
+        display: none!important;
+        /*background: url(https://vupload.douyucdn.cn//201612/04/13/cb708f6f76e1d3135bb9ab63e126cd84.png) center no-repeat;*/
+        border-radius: 20px;
+        padding: 1px;
+    }
+    /*直播间*/
+    .body-flash-fullpage #mainbody .live-room .room-video {
+        right: 340px !important;
+        border-left-width: 0px;
+        border-right-width: 0px;
+    }
+    .live-room-normal-right,
+    .room-video {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    }
+    /*使用HTML5播放器时*/
+    /*.room-video,*/
+    .danmu-container {
+        border: 0;
+    }
+    .danmu-ctrl {
+        background: #23272b!important;
+        border: 0!important;
+        color: #9a9a9a!important;
+    }
+    /*礼物*/
+    .get-yw .yw-collect-box.ywrmd {
+        min-height: 140px !important;
+    }
+    .yw-collect-box {
+        top: -180px !important;
+        margin-left: -50px !important;
+    }
+    #js-stats-and-actions {
+        margin-top: 5px;
+        padding: 2px 22px 2px 19px;
+        height: 40px;
+        border: 1px solid #e5e4e4;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    }
+    .body-flash-fullpage .m-wealth {
+        padding-top: 0px!important;
+        margin-top: 0px!important;
+    }
+    .body-flash-fullpage #js-stats-and-actions {
+        left: 2px !important;
+        bottom: 2px !important;
+        right: 340px!important;
+        padding-top: 12px!important;
+        padding-bottom: 14px!important;
+    }
+    /*鱼翅和充值图标*/
+    span.y2.fl,
+    a.r-com-btn.getYc.fl {
+        display: none!important;
+    }
+    /*鱼丸可领取时间*/
+    .task-Getyw .tip {
+        -moz-transform: scale(0.8);
+        zoom: 0.8;
+    }
+    .uinfo-ywyc {
+        clear: none !important;
+        height: 0px!important;
+        margin-top: 10px!important;
+    }
+    .uinfo-ywyc .m-wealth {
+        display: flex !important;
+        height: 0px;
+    }
+    /*去鱼丸领取时的APP下载提示 */
+    p.yw-app-des {
+        display: none !important;
+    }
+    .ft-sign-cont {
+        display: none!important;
+    }
+    /*微博分享提示*/
+    .room-wbshare {
+        display: none !important;
+    }
+    /* 聊天区边框圆角 */
+    .fans-rank {
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 5px 5px 0px 0px;
+    }
+    .fans-rank .fans-list {
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 5px 5px 0px 0px;
+    }
+    .chat-cont {
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 0px;
+    }
+    .chat-speak {
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 0px 0px 5px 5px;
+        height: 70px!important;
+    }
+    .chat-feat .cs-textarea,
+    .chat-feat .login-inside-nologbor {
+        height: 20px!important;
+    }
+    .chat-feat .b-btn {
+        height: 32px!important;
+        line-height: 32px!important;
+    }
+    .no-login,
+    /*未登陆聊天区一个区域*/
+    .giftbatter-box
+    /*去聊天区的特效礼物*/
+    {
+        display: none !important;
+        height: 0px;
+    }
+    /*宝箱领取*/
+    .peck {
+        -moz-transform: scale(0.8);
+        zoom: 0.8;
+        z-index: 312!important;
+    }
+    /*粉丝聊天条*/
+    .chat-cont li.fans-chart,
+    .chat-cont li.noble-chart {
+        padding: 0px!important;
+        margin-left: 0px!important;
+        background: none!important;
+    }
+    /*精简聊天区图标*/
+    .chat-task-madel,
+    .user-level-wel,
+    .task-wel,
+    .f-phone,
+    .user-noble-lv,
+    .enter-welcome1,
+    .status-low-enter,
+    img.lw-imgs,
+    .chat-icon-pad {
+        display: none !important;
+    }
+    /*当导航栏在其他页面展开时,宽高会自动调整,不介意左侧抽屉,可以注释掉*/
+    #left,
+    /*去左边抽屉菜单*/
+    .small-nav>ul>li:nth-of-type(9),
+    /*抽屉菜单的游戏*/
+    /*抽屉菜单的页游中心*/
+    .channel-cate>ul>li:nth-of-type(5) {
+        display: none !important;
+    }
+    /*背景*/
+    html {
+        background: #EEEEEE;
+    }
+}
+
+@-moz-document url-prefix("https://www.douyu.com/directory"),
+url-prefix("https://www.douyu.com/room/my_follow") {
+    /* 背景 */
+    #mainbody {
+        background: #EEEEEE;
+    }
+    /*左抽屉菜单*/
+    #left {
+        display: block !important;
+    }
+    /* <!-- web直播页广告位 --> */
+    .lol-ad {
+        display: none !important;
+    }
+    /* http://www.douyu.com/directory/下的列表 */
+    .item-data .unit {
+        border: 1px solid #eee;
+        background: #eee;
+    }
+    .left-menu {
+        background: #2c2c2c;
+    }
+}
+
+@-moz-document domain("douyu.com") {
+    /* 斗鱼首页 */
+    .row-1,
+    /*<!--第一行：广告、新闻、推广-->*/
+    .row-3,
+    /*<!--第三行：广告-->*/
+    .row-4/*<!--第五行：斗鱼推广-->*/
+    ,
+    .row-5
+    /*<!--第七行：官方活动-->*/
+    {
+        display: none !important;
+    }
+}
+
+@-moz-document url-prefix("https://www.douyu.com/cms/zt/") {
+    /****** 特别直播间的一些调整 ******/
+    /*去分享按钮*/
+    .r_share,
+    .room_qrcode {
+        display: none !important;
+    }
+    /*关注按钮*/
+    .room_mes .btn-group .focus-box {
+        top: 0px;
+    }
+    /***** 活动直播间 *****/
+    /*去网页头的游戏*/
+    .head .header_nav>li:nth-of-type(4) {
+        display: none !important;
+    }
+    /* 去个人任务 */
+    #header .head .header_r .head_user .task {
+        display: none !important;
+    }
+    /**** 礼物区 ****/
+    .stats_and_actions {
+        height: auto !important;
+    }
+    /* 任务 */
+    .task-Getyw .task {
+        display: none !important;
+    }
+    /* 鱼丸 */
+    .uinfo-ywyc {
+        position: static;
+    }
+    .c_cont.clearfix.chat_cont.c_gift_cont_height {
+        padding: 5px 2px;
+    }
+    div#cq_fans {
+        margin: 0 -2px;
+    }
+    .mb15 {
+        margin-bottom: 1px;
+    }
+    .column01 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #get_rem {
+        top: -180px !important;
+    }
+}
+
+@-moz-document domain("douyu.com") {
+    /* 滚动条美化 */
+    /* Let's get this party started */
+     ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    /* Track */
+     ::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 5px rgba(255, 153, 0, 0.6);*/
+        background-color: #F5F5F5;
+    }
+    /* Handle */
+     ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #FF9900;
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    }
+}
