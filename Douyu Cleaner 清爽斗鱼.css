@@ -4,28 +4,28 @@
 			by Another_Dreams
 			Blog: weijohn.me
   
-			v2.60
-			Last updated: 2017/11/07
+			v3.0.0
+			Last updated: 2017/11/15
 	======================================================*/
     /*====================================================
 		基于 Chrome 50+ 进行编写,配合ABP或uBlock
   		主要针对登陆后的斗鱼,不登陆时有些细节未调整!!! 
 	=====================================================*/
     /*临时活动屏蔽区*/
-    /* 聊天区最大高度根据浏览器手动调整,主要针对1080p */
-    .body-flash-fullpage .chat-cont .chat-cont-wrap {
-        height: calc(100% - 0px) !important;
-    }
-    .body-flash-fullpage .chat-speak {
-        padding: 0px 7px 7px !important;
-    }
+
+    /*头像提醒小圆点*/
     b.umes-icon {
         display: none!important;
     }
     /*去酬勤榜*/
-    #js-fans-rank {
+    .fans-rank {
         display: none!important;
         height: 0px!important;
+    }
+    /*聊天弹幕*/
+    .PlayerCaseSub-Main .chat-cont {
+        top: 0px !important;
+        border-radius: 4px 4px 0px 0px;
     }
     /* 斗鱼活动按钮 去除视频下方竞猜、活动等 */
     .action-list,
@@ -89,6 +89,7 @@
     /*等级上线提醒*/
     .normallevel-lead,
     /*主播商品推荐*/
+    .day-pay-wrap,
     .fishop-anchor-push-box.expanded,
     .fishop-anchor-recommands-box.expanded,
     /*输入框首充徽章*/
@@ -146,7 +147,7 @@
         height: 55px !important;
     }
     .room-mes .anchor-pic img {
-        border-radius: 50%!important;
+        border-radius: 50% !important;
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     }
     .anchor-pic .anchor-cover-wrap .cover {
@@ -166,11 +167,11 @@
             margin-left: 85px !important;
         }
         .room-mes {
-            height: 80px !important;
+            height: 82px !important;
         }
         /*主播头像*/
         .room-mes .anchor-pic {
-            margin: 2px 0px 0px 2px;
+            margin: 4px 0px 0px 3px;
             width: 75px !important;
             height: 75px !important;
         }
@@ -234,7 +235,6 @@
     .body-flash-fullpage #js-stats-and-actions {
         left: 2px !important;
         bottom: 2px !important;
-        right: 340px!important;
         padding-top: 12px!important;
         padding-bottom: 14px!important;
     }
@@ -258,47 +258,16 @@
         height: 0px;
     }
     /*去鱼丸领取时的APP下载提示 */
-    p.yw-app-des {
-        display: none !important;
-    }
-    .ft-sign-cont {
-        display: none!important;
-    }
+    p.yw-app-des,
+    .ft-sign-cont,
     /*微博分享提示*/
-    .room-wbshare {
+    .room-wbshare 
+    /*未登陆聊天区一个区域*/
+    .no-login {
         display: none !important;
     }
-    /* 聊天区边框圆角 */
-    .fans-rank {
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 5px 5px 0px 0px;
-    }
-    .fans-rank .fans-list {
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 5px 5px 0px 0px;
-    }
-    .chat-cont {
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 0px;
-    }
-    .chat-speak {
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius: 0px 0px 5px 5px;
-        height: 70px!important;
-    }
-    .chat-feat .cs-textarea,
-    .chat-feat .login-inside-nologbor {
-        height: 20px!important;
-    }
-    .chat-feat .b-btn {
-        height: 32px!important;
-        line-height: 32px!important;
-    }
-    .no-login,
-    /*未登陆聊天区一个区域*/
-    .giftbatter-box
     /*去聊天区的特效礼物*/
-    {
+    .giftbatter-box {
         display: none !important;
         height: 0px;
     }
