@@ -1,7 +1,7 @@
 
 # Douyu Cleaner 清爽斗鱼
 
-## <center>专注直播内容，还你清爽页面</center>
+## 专注直播内容，还你清爽页面
 ![cold](https://userstyles.org/style_screenshots/132037_after.jpeg)
 为了更好的直播观看体验，我自2016年开始编写本CSS.
 
@@ -26,6 +26,11 @@ JS安装地址：[Install style as userscript](https://userstyles.org/styles/use
 ---
 ### 更新历史
 
+---- 2017年11月20日 ----</br>
+[#]修复粉丝等级牌选项的bug</br>
+[+]增加屏蔽房间分区排行榜选项</br>
+[+]增加屏蔽皇帝推荐选项
+
 ---- 2017年11月15日 ----</br>
 [**]斗鱼样式更新，同步调整
 
@@ -33,7 +38,6 @@ JS安装地址：[Install style as userscript](https://userstyles.org/styles/use
 [**] 由于最近直播间信息一栏增加了很多内容，所以调整了布局，并加入针对不同分辨率响应布局
 
 ---- 2017年10月16日 ----</br>
-[#] 增加屏蔽头像提醒小圆点选项</br>
 [#] 适配新聊天区样式</br>
 [#] 修复直播间标题栏样式</br>
 

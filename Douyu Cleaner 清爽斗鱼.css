@@ -4,19 +4,14 @@
 			by Another_Dreams
 			Blog: weijohn.me
   
-			v3.0.0
-			Last updated: 2017/11/15
+            v3.1.0
+			Last updated: 2017/11/20
 	======================================================*/
     /*====================================================
 		基于 Chrome 50+ 进行编写,配合ABP或uBlock
   		主要针对登陆后的斗鱼,不登陆时有些细节未调整!!! 
 	=====================================================*/
     /*临时活动屏蔽区*/
-
-    /*头像提醒小圆点*/
-    b.umes-icon {
-        display: none!important;
-    }
     /*去酬勤榜*/
     .fans-rank {
         display: none!important;
@@ -34,28 +29,22 @@
     /*去历史和关注的广告条*/
     .f-sign-cont,
     .his-sign-cont,
-    /*去个人中心我的任务*/
+    /*去个人中心我的任务、贵族、头像圆点*/
     .o-login .l-menu .task,
-    /*去个人中心的贵族*/
     .nobility-privilege,
+    .umes-icon,
     /*房间头部广告*/
     .room-ad-top,
     /*去广告*/
     .chat-top-ad,
     .chat_top_pic,
     .rank-video-ad,
-    /*去视频下方广告*/
-    .room-ad-video-down,
+    /*去视频下方主播发帖 直播公告 视频推荐*/
+    .PlayerSub,
     /*去弹幕公告*/
     #js-chat-notice,
-    /*去热门推广*/
-    #js-live-room-normal-equal-left,
     /*去视频下方任务*/
     .fl.task-btn,
-    /*去视频下方风云榜*/
-    .liveOrder-trigger,
-    /*去直播公告*/
-    #js-live-room-normal-equal-right,
     /*去聊天区广告*/
     .chat-ad,
     /*去领鱼丸提示*/
@@ -133,14 +122,20 @@
     .relate-text .anchor-impress {
         margin: 3px 0 0!important;
     }
+    /*去皇帝推荐*/
+    .room-emperor-recommend{
+        display: none !important;
+    }
+    .room-mes.roommes-bg-big {
+        background: #fff;
+    }
     /*主播头像*/
     .relate-text {
         margin-left: 62px !important;
     }
     .room-mes {
-        height: 60px !important;
+        height: auto !important;
     }
-    /*主播头像*/
     .room-mes .anchor-pic {
         margin: 2px 0px 0px 2px;
         width: 55px !important;
@@ -175,10 +170,13 @@
             width: 75px !important;
             height: 75px !important;
         }
+        /*1080P以上不屏蔽分区排行榜*/
+        .catagory-order-container {
+            display: none !important;
+        }
     }
     @media screen and (max-width: 1500px) {
-        .relate-text .headline,
-        .room-mes .headline h1 {
+        .relate-text .headline {
             width: 350px !important;
             max-width: 350px!important;
         }
@@ -191,12 +189,10 @@
         padding: 1px;
     }
     /*直播间*/
-    .body-flash-fullpage #mainbody .live-room .room-video {
-        right: 340px !important;
+    .body-flash-fullpage .room-video {
         border-left-width: 0px;
         border-right-width: 0px;
     }
-    .live-room-normal-right,
     .room-video {
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 5px;
@@ -232,12 +228,6 @@
         padding-top: 0px!important;
         margin-top: 0px!important;
     }
-    .body-flash-fullpage #js-stats-and-actions {
-        left: 2px !important;
-        bottom: 2px !important;
-        padding-top: 12px!important;
-        padding-bottom: 14px!important;
-    }
     /*鱼翅和充值图标*/
     span.y2.fl,
     a.r-com-btn.getYc.fl {
@@ -261,7 +251,7 @@
     p.yw-app-des,
     .ft-sign-cont,
     /*微博分享提示*/
-    .room-wbshare 
+    .room-wbshare
     /*未登陆聊天区一个区域*/
     .no-login {
         display: none !important;
@@ -270,12 +260,6 @@
     .giftbatter-box {
         display: none !important;
         height: 0px;
-    }
-    /*宝箱领取*/
-    .peck {
-        -moz-transform: scale(0.8);
-        zoom: 0.8;
-        z-index: 312!important;
     }
     /*粉丝聊天条*/
     .chat-cont li.fans-chart,
@@ -293,7 +277,8 @@
     .enter-welcome1,
     .status-low-enter,
     img.lw-imgs,
-    .chat-icon-pad {
+    .chat-icon-pad/*:not([data-msg=fans]):not(.user-level)*//*粉丝牌和等级牌*/
+    {
         display: none !important;
     }
     /*当导航栏在其他页面展开时,宽高会自动调整,不介意左侧抽屉,可以注释掉*/
@@ -336,16 +321,13 @@ url-prefix("https://www.douyu.com/room/my_follow") {
 }
 
 @-moz-document domain("douyu.com") {
-    /* 斗鱼首页 */
-    .row-1,
+    /*====斗鱼首页====*/
+    /*<!--第五行：官方活动-->*/
+    .row-5,
     /*<!--第一行：广告、新闻、推广-->*/
+    .row-1,
     .row-3,
-    /*<!--第三行：广告-->*/
-    .row-4/*<!--第五行：斗鱼推广-->*/
-    ,
-    .row-5
-    /*<!--第七行：官方活动-->*/
-    {
+    .row-4 {
         display: none !important;
     }
 }
