@@ -4,8 +4,8 @@
 			by Another_Dreams
 			Blog: weijohn.me
   
-            v3.1.0
-			Last updated: 2017/11/20
+            v3.1.1
+			Last updated: 2017/11/23
 	======================================================*/
     /*====================================================
 		基于 Chrome 50+ 进行编写,配合ABP或uBlock
@@ -24,6 +24,7 @@
     }
     /* 斗鱼活动按钮 去除视频下方竞猜、活动等 */
     .action-list,
+    .more-action-btn-wrap,
     /*去分类广告*/
     #header .head-nav .assort-ad,
     /*去历史和关注的广告条*/
@@ -112,7 +113,7 @@
     }
     .relate-text .headline,
     .relate-text .acinfo-fs-con {
-        width: calc(45% + 100px) !important;
+        width: calc(42% + 105px) !important;
     }
     .relate-text .headline,
     .relate-text .acinfo-fs-con,
