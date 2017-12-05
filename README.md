@@ -26,6 +26,10 @@ JS安装地址：[Install style as userscript](https://userstyles.org/styles/use
 ---
 ### 更新历史
 
+---- 2017年12月04日 ----</br>
+[+]增加屏蔽PC客户端图标</br>
+[#]修复一些样式问题</br>
+
 ---- 2017年11月20日 ----</br>
 [#]修复粉丝等级牌选项的bug</br>
 [+]增加屏蔽房间分区排行榜选项</br>

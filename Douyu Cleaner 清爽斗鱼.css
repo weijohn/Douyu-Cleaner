@@ -1,11 +1,11 @@
 @-moz-document domain("douyu.com") {
     /*====================================================
 			Douyu Cleaner 清爽斗鱼
-			by Another_Dreams
-			Blog: weijohn.me
+            by Another_Dreams
+            Blog: weijohn.me
   
-            v3.1.1
-			Last updated: 2017/11/23
+            v3.1.2
+			Last updated: 2017/12/04
 	======================================================*/
     /*====================================================
 		基于 Chrome 50+ 进行编写,配合ABP或uBlock
@@ -83,7 +83,6 @@
     .fishop-anchor-push-box.expanded,
     .fishop-anchor-recommands-box.expanded,
     /*输入框首充徽章*/
-    /*输入框首充徽章*/
     .firstpay-award-icon,
     .firstpay-entrance,
     .firstpay-modal,
@@ -111,9 +110,11 @@
         -moz-transform: scale(0.6);
         zoom: 0.6;
     }
-    .relate-text .headline,
-    .relate-text .acinfo-fs-con {
+    .relate-text .headline {
         width: calc(42% + 105px) !important;
+    }
+    .relate-text .acinfo-fs-con {
+        min-width: calc(42% + 105px) !important;
     }
     .relate-text .headline,
     .relate-text .acinfo-fs-con,
@@ -124,9 +125,10 @@
         margin: 3px 0 0!important;
     }
     /*去皇帝推荐*/
-    .room-emperor-recommend{
+    .room-emperor-recommend {
         display: none !important;
     }
+    .room-mes.roommes-bg-small,
     .room-mes.roommes-bg-big {
         background: #fff;
     }
@@ -274,6 +276,7 @@
     .user-level-wel,
     .task-wel,
     .f-phone,
+    .pc-client-icon,
     .user-noble-lv,
     .enter-welcome1,
     .status-low-enter,
